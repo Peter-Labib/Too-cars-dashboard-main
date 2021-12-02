@@ -8,7 +8,7 @@
 }
 
 .title-added {
-  @apply text-main text-lg font-semibold mb-2;
+  @apply text-main text-lg font-semibold mb-1;
 }
 
 .captin-main-data-col-added {
@@ -16,7 +16,7 @@
 }
 
 .input-container-main-data-added {
-  @apply h-full w-full p-1 flex flex-col gap-2 overflow-hidden;
+  @apply h-full w-full p-1 flex flex-col gap-1 overflow-hidden;
 }
 
 .shadow-added {

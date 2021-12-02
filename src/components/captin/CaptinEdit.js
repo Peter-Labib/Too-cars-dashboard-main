@@ -5,7 +5,7 @@ import plusGreen from '../../assets/icon/plus-green.svg'
 import location from '../../assets/icon/location-blue.svg'
 
 const CaptinEditButton = ({title, icon}) => (
-  <div className=' rounded-lg shadow-blue-added flex items-center gap-x-4 px-4 py-3 bg-secondary'>
+  <div className=' rounded-lg shadow-blue-added flex items-center gap-x-4 px-4 py-3 bg-secondary cursor-pointer'>
       <div>
           <img src={icon} alt='icon' />
       </div>
