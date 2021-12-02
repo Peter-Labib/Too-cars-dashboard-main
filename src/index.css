@@ -1,8 +1,32 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tajawal&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+.nav-item--apply {
+  @apply flex items-center hover:bg-main hover:shadow-inner transition cursor-pointer;
+}
+
+.title-added {
+  @apply text-main text-lg font-semibold mb-2;
+}
+
+.captin-main-data-col-added {
+  @apply col-span-4 md:col-span-2 lg:col-span-1 overflow-hidden;
+}
+
+.input-container-main-data-added {
+  @apply h-full w-full p-1 flex flex-col gap-2 overflow-hidden;
+}
+
+.shadow-added {
+  box-shadow: 0px 15px 50px rgba(160, 163, 189, 0.3);
+}
+
+.shadow-blue-added {
+  box-shadow: 0px 4px 7px -1px rgba(0, 134, 225, 0.43);
+}
+
 body {
-    font-family: 'Outfit', sans-serif;
+  font-family: 'Tajawal', sans-serif;
 }

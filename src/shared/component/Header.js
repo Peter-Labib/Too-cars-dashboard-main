@@ -1,24 +1,20 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
 import logo from '../../assets/img/too-logo-1.png'
 import icon from '../../assets/img/icon.png'
 
-const Header = ({ avatar = icon ,toggle}) => {
-  const lang = 'en'
+const Header = ({ avatar = icon, toggle }) => {
 
   return (
-    <header
-      className={`${
-        lang === 'ar' ? 'flex-row-reverse' : ''
-      } h-16 flex px-4 lg:px-8 bg-main text-white items-center overflow-hidden mb-4`}
-    >
-      <div className='lg:mx-4 max-h-full text-center'>
+    <header className='h-16 flex px-4 lg:px-8 bg-main text-white items-center overflow-hidden mb-4'>
+      <Link to='/' className='lg:mx-4 max-h-full text-center'>
         <div className='w-2/6 mx-auto'>
           <img className='object-cover w-full' src={logo} alt='logo' />
         </div>
         <p className=''>Dashboard</p>
-      </div>
+      </Link>
       <button className='p-1 mx-1' onClick={toggle}>
         <FontAwesomeIcon icon={faBars} />
       </button>

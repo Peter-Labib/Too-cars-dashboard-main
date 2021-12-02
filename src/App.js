@@ -1,12 +1,19 @@
 import React from 'react'
-// import Header from './shared/component/Header'
+import { Route, Switch } from 'react-router-dom'
 import AppContainer from './components/AppContainer'
+import Login from './components/views/Login'
 
 function App() {
   return (
     <React.Fragment>
-      {/* <Header /> */}
-      <AppContainer />
+      <Switch>
+        <Route path='/login'>
+          <Login />
+        </Route>
+        <Route path='/'>
+          <AppContainer />
+        </Route>
+      </Switch>
     </React.Fragment>
   )
 }

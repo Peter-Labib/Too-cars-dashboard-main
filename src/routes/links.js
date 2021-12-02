@@ -1,91 +1,70 @@
+import { faFlag } from '@fortawesome/free-solid-svg-icons'
+
 const routeLinks = [
   {
-    name: 'calc',
-    icon: '',
+    name: 'calculation',
+    icon: faFlag,
     children: [
       {
-        name: '',
+        name: 'first',
         path: '',
-        icon:''
+        icon: faFlag,
       },
     ],
   },
   {
-    name: 'calc',
-    icon: '',
+    name: 'countries and cities',
+    icon: faFlag,
     children: [
       {
-        name: '',
+        name: 'first',
         path: '',
-        icon:''
+        icon: faFlag,
       },
     ],
   },
   {
-    name: 'calc',
-    icon: '',
+    name: 'trips',
+    icon: faFlag,
     children: [
       {
-        name: '',
+        name: 'first',
         path: '',
-        icon:''
+        icon: faFlag,
       },
     ],
   },
   {
-    name: 'calc',
-    icon: '',
+    name: 'drivers',
+    icon: faFlag,
     children: [
       {
-        name: '',
+        name: 'first',
         path: '',
-        icon:''
+        icon: faFlag,
       },
     ],
   },
   {
-    name: 'calc',
-    icon: '',
+    name: 'passengers',
+    icon: faFlag,
     children: [
       {
-        name: '',
+        name: 'first',
         path: '',
-        icon:''
+        icon: faFlag,
       },
     ],
   },
   {
-    name: 'calc',
-    icon: '',
-    children: [
-      {
-        name: '',
-        path: '',
-        icon:''
-      },
-    ],
+    name: 'pages',
+    icon: faFlag,
+    children: [],
   },
   {
-    name: 'calc',
-    icon: '',
-    children: [
-      {
-        name: '',
-        path: '',
-        icon:''
-      },
-    ],
-  },
-  {
-    name: 'calc',
-    icon: '',
-    children: [
-      {
-        name: '',
-        path: '',
-        icon:''
-      },
-    ],
+    name: 'offers',
+    icon: faFlag,
+    children: [],
   },
 ]
 
