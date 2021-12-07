@@ -21,11 +21,27 @@ module.exports = {
         'purple--extended': '#6F62FF',
         'black--extended': '#071824',
       },
+      height: {
+        5.5: '22px',
+      },
       maxWidth: {
         '2xs': '15rem',
       },
       minWidth: {
         '2xs--extended': '14rem',
+      },
+      keyframes: {
+        buzz: {
+          '50%': {
+            transform: 'translateX(1px) rotate(1deg)',
+          },
+          '100%': {
+            transform: 'translateX(-1px) rotate(-1deg)',
+          },
+        },
+      },
+      animation: {
+        buzz: 'buzz 1s linear infinite',
       },
     },
   },

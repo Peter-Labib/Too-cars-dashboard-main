@@ -2,11 +2,11 @@ import React, { useState } from 'react'
 import { Route, Switch } from 'react-router-dom'
 import Sidebar from '../shared/component/Sidebar/Sidebar'
 import Header from '../shared/component/Header'
-import CaptinMainData from './captin/CaptinMainData'
+import EditCaptinMainData from './captin/EditCaptinMainData'
 import Home from './views/Home'
 
 const AppContainer = () => {
-  const [openSidebar, setopenSidebar] = useState(false)
+  const [openSidebar, setopenSidebar] = useState(true)
   console.log('appContainer')
 
   const sidebarToogle = () => {
@@ -16,9 +16,9 @@ const AppContainer = () => {
   return (
     <React.Fragment>
       <Header toggle={sidebarToogle} />
-      <div className='mx-auto flex gap-x-4 w-full h-full px-4'>
+      <div className='mx-auto flex lg:gap-x-4 w-full h-full px-4'>
         <div
-          className={`overflow-hidden rounded-lg shadow-added transition-all duration-300 ${
+          className={`hidden lg:block overflow-hidden rounded-lg shadow-added transition-all duration-300 ${
             openSidebar ? 'max-w-full min-w-2xs--extended' : 'max-w-0 min-w-0'
           }`}
         >
@@ -33,7 +33,7 @@ const AppContainer = () => {
         >
           <Switch>
             <Route path='/captin'>
-              <CaptinMainData />
+              <EditCaptinMainData />
             </Route>
             <Route path='/'>
               <Home />

@@ -1,20 +1,76 @@
 import React from 'react'
+import { useForm, Controller } from 'react-hook-form'
+import { yupResolver } from '@hookform/resolvers/yup'
+import * as yup from 'yup'
 import Input from '../../shared/ui/Input'
-import logo from '../../assets/img/logo-login.svg'
+import Button from '../../shared/ui/Button'
+import logo from '../../assets/img/Untitled-2.png'
+
+const schema = yup.object({
+  email: yup.string().email('Please enter a valid email').required('Required'),
+  password: yup.string().required('Required'),
+})
 
 const Login = () => {
+  const {
+    handleSubmit,
+    control,
+    formState: { errors },
+  } = useForm({
+    resolver: yupResolver(schema),
+  })
+
+  const onSubmit = (data) => console.log(data)
+
   return (
-    <div className='grid place-content-center w-screen h-screen'>
-      <div className='w-full p-2'>
+    <div className='grid place-content-center w-screen h-screen py-2 px-5'>
+      <div className='md:max-w-xs '>
         <div className='mx-auto mb-4 w-11/12'>
-          <img className='w-full object-cover' src={logo} alt='logo' />
+          <img
+            className='w-full object-cover filter drop-shadow-2xl'
+            src={logo}
+            alt='logo'
+          />
         </div>
-        <div className=' mb-2'>
-          <Input label='Email' type='text' name='login-email' />
-        </div>
-        <div className=''>
-          <Input label='password' type='text' name='login-password' />
-        </div>
+        <form onSubmit={handleSubmit(onSubmit)}>
+          <div className='mb-1'>
+            <Controller
+              name='email'
+              control={control}
+              render={({ field }) => (
+                <Input
+                  label='Email'
+                  type='text'
+                  name='email'
+                  id='login-email'
+                  classes='rounded-3xl'
+                  error={errors.email?.message}
+                  {...field}
+                />
+              )}
+            />
+          </div>
+          <div className='mb-6'>
+            <Controller
+              name='password'
+              control={control}
+              render={({ field }) => (
+                <Input
+                  label='password'
+                  type='password'
+                  name='password'
+                  id='login-password'
+                  classes='rounded-3xl'
+                  error={errors.password?.message}
+                  {...field}
+                />
+              )}
+            />
+          </div>
+          <div className='mx-auto w-7/12'>
+            <Button type='submit' text='submit' login />
+          </div>
+        </form>
       </div>
     </div>
   )

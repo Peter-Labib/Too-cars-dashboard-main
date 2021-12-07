@@ -8,7 +8,7 @@ const ToggleBtn = ({ status }) => {
       checked={enabled}
       onChange={setEnabled}
       className={`${enabled ? 'bg-green-500' : 'bg-gray-600'}
-          relative mx-auto items-center flex flex-shrink-0 h-5 w-10 border-2 border-transparent rounded-full cursor-pointer transition-colors ease-in-out duration-200 focus:outline-none focus-visible:ring-2  focus-visible:ring-white focus-visible:ring-opacity-75`}
+          relative mx-auto items-center flex flex-shrink-0 h-5.5 w-10 border-2 border-transparent rounded-full cursor-pointer transition-colors ease-in-out duration-200 focus:outline-none focus-visible:ring-2  focus-visible:ring-white focus-visible:ring-opacity-75`}
     >
       <span className='sr-only'>Use setting</span>
       <span

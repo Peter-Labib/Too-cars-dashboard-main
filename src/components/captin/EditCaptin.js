@@ -5,7 +5,7 @@ import plusGreen from '../../assets/icon/plus-green.svg'
 import location from '../../assets/icon/location-blue.svg'
 
 const CaptinEditButton = ({title, icon}) => (
-  <div className=' rounded-lg shadow-blue-added flex items-center gap-x-4 px-4 py-3 bg-secondary cursor-pointer'>
+  <div className='transition-shadow rounded-lg shadow-blue-added flex items-center gap-x-4 px-4 py-3 bg-secondary cursor-pointer'>
       <div>
           <img src={icon} alt='icon' />
       </div>
@@ -13,7 +13,7 @@ const CaptinEditButton = ({title, icon}) => (
   </div>
 )
 
-const CaptinEdit = () => {
+const EditCaptin = () => {
   return (
     <div className='w-full'>
       <p className='title-added'>Captin edit</p>
@@ -35,4 +35,4 @@ const CaptinEdit = () => {
   )
 }
 
-export default CaptinEdit
+export default EditCaptin

@@ -1,0 +1,28 @@
+.close_scss:hover + .img_scss {
+  animation-name: buzz;
+  animation-duration: 0.2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  transform-origin: 30% 5%;
+}
+
+
+@keyframes buzz {
+  0% {
+    transform: rotate(-1.5deg);
+    animation-timing-function: ease-in;
+  }
+
+  50% {
+    transform: rotate(2deg);
+    animation-timing-function: ease-out;
+  }
+}
+
+// transition
+
+.leave{
+  transition: all ease-in-out 1s;
+}
+

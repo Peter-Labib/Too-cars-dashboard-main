@@ -1,4 +1,5 @@
 import React from 'react'
+import { strings } from '../../Localization/languages'
 import CardsContainer from '../../shared/component/CardsContainer'
 import Card from '../../shared/component/Card'
 import icon from '../../assets/icon/users.svg'
@@ -17,19 +18,66 @@ const OsUsersCount = ({ color, os, count }) => (
 const Home = () => {
   return (
     <div className='grid grid-cols-6 gap-x-4'>
+      {/* second col */}
+      <div className='col-span-6 md:col-span-3 lg:col-span-2 '>
+        <CardsContainer title={strings.DriversEgypt}>
+          <Card
+            color='green--extended'
+            count='45484'
+            countsFor={strings.MobileAndAdminActive}
+          />
+          <Card
+            color='red--extended'
+            count='45484'
+            countsFor={strings.AdminInactive}
+          />
+          <Card count='45484' countsFor={strings.AdminSuspend} />
+          <Card count='45484' countsFor={strings.AdminUnderRevision} />
+          <Card count='45484' countsFor={strings.AdminWaitingApproval} />
+        </CardsContainer>
+      </div>
+      {/* third col */}
+      <div className='col-span-6 md:col-span-3 lg:col-span-2 self-start flex flex-col gap-y-4 lg:gap-y-8 mb-4'>
+        <CardsContainer title={strings.PessengersEgypt}>
+          <Card
+            color='green--extended'
+            count='45484'
+            countsFor={strings.MobileActive}
+          />
+          <Card
+            color='purple--extended'
+            count='45484'
+            countsFor={strings.MobileInactive}
+          />
+          <Card
+            color='black--extended'
+            count='45484'
+            countsFor={strings.Suspend}
+          />
+        </CardsContainer>
+        <CardsContainer title={strings.SupervisorsTrips}>
+          <Card color='red--extended' count='45484' countsFor={strings.Busy} />
+          <Card
+            color='green--extended'
+            count='45484'
+            countsFor={strings.TodayPaidTrips}
+          />
+        </CardsContainer>
+      </div>
+
       {/* all users circule */}
       <div className='col-span-6 md:col-span-3 lg:col-span-2 mb-4 rounded-lg shadow-added px-2 md:px-4 py-6 flex flex-col gap-y-7 lg:self-start items-center overflow-hidden'>
         <div className='flex gap-x-2'>
           <span>
             <img src={icon} alt='users' />
           </span>
-          <span className='font-semibold'>All users</span>
+          <span className='font-semibold'>{strings.AllUsers}</span>
           <span className='text-main font-semibold'>64128</span>
         </div>
         <div className='flex gap-x-2'>
-          <OsUsersCount color='#60A0FF' os='Android' count='15887' />
-          <OsUsersCount color='#FF6161' os='Iphone' count='15887' />
-          <OsUsersCount color='#00BB40' os='Web' count='15887' />
+          <OsUsersCount color='#60A0FF' os={strings.Android} count='15887' />
+          <OsUsersCount color='#FF6161' os={strings.Iphone} count='15887' />
+          <OsUsersCount color='#00BB40' os={strings.Web} count='15887' />
         </div>
         <div className='w-full relative h-44'>
           <div
@@ -72,29 +120,6 @@ const Home = () => {
             <span className='text-white'>8000</span>
           </div>
         </div>
-      </div>
-
-      {/* second col */}
-      <div className='col-span-6 md:col-span-3 lg:col-span-2 self-start flex flex-col gap-y-4 lg:gap-y-8 mb-4'>
-        <CardsContainer title='pessengers'>
-          <Card color='green--extended' count='45484' countsFor='active' />
-          <Card color='purple--extended' count='45484' countsFor='active' />
-          <Card color='red--extended' count='45484' countsFor='active' />
-        </CardsContainer>
-        <CardsContainer title='Supervisors'>
-          <Card color='red--extended' count='45484' countsFor='active' />
-          <Card color='green--extended' count='45484' countsFor='active' />
-        </CardsContainer>
-      </div>
-      {/* third col */}
-      <div className='col-span-6 md:col-span-3 lg:col-span-2 self-start'>
-        <CardsContainer title='pessengers'>
-          <Card color='green--extended' count='45484' countsFor='active' />
-          <Card color='red--extended' count='45484' countsFor='active' />
-          <Card color='black--extended' count='45484' countsFor='active' />
-          <Card color='black--extended' count='45484' countsFor='active' />
-          <Card color='purple--extended' count='45484' countsFor='active' />
-        </CardsContainer>
       </div>
     </div>
   )

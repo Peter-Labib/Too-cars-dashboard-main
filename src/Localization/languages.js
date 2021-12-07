@@ -1,7 +1,14 @@
 import LocalizedStrings from 'react-localization'
-import { LANGUAGE } from '../Components/General/StaticKeys'
-import en from './en'
-import ar from './ar'
+import { LANGUAGE } from '../utils/StaticKeys'
+import { langs } from './langs'
+
+let en = {}
+let ar = {}
+
+Object.getOwnPropertyNames(langs).forEach((e) => {
+  en[e] = langs[e]?.en
+  ar[e] = langs[e]?.ar
+})
 
 export const strings = new LocalizedStrings({
   en,
@@ -11,12 +18,10 @@ export const strings = new LocalizedStrings({
 export const toogleLanguage = (lang) => {
   if (lang === 'en') {
     localStorage.removeItem(LANGUAGE)
-
     strings.setLanguage('en')
     localStorage.setItem(LANGUAGE, 'en')
   } else {
     localStorage.removeItem(LANGUAGE)
-
     strings.setLanguage('ar')
     localStorage.setItem(LANGUAGE, 'ar')
   }
@@ -41,6 +46,7 @@ export const changeLanguage = () => {
     document.documentElement.setAttribute('dir', 'rtl')
     document.documentElement.setAttribute('lang', 'ar')
   }
+  // console.log(strings.getLanguage())
 }
 
 export const getLanguage = () => {

@@ -14,7 +14,7 @@ const InfoCard = ({ title, children }) => (
 const CaptinStatus = ({ state, rate = 0, acceptance = 0 }) => {
   console.log('re')
   return (
-    <div className='grid grid-cols-3 grid-rows-4 gap-4 rounded-lg shadow-added h-full p-4'>
+    <div className='grid grid-cols-2 md:grid-cols-3  gap-4 rounded-lg shadow-added h-full p-4'>
       <InfoCard title='user status'>
         <ToggleBtn />
       </InfoCard>
