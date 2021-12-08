@@ -2,6 +2,7 @@ import React from 'react'
 import { useForm, Controller } from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers/yup'
 import * as yup from 'yup'
+import { strings } from '../../Localization/languages'
 import Input from '../../shared/ui/Input'
 import Button from '../../shared/ui/Button'
 import logo from '../../assets/img/Untitled-2.png'
@@ -39,7 +40,7 @@ const Login = () => {
               control={control}
               render={({ field }) => (
                 <Input
-                  label='Email'
+                  label={strings.Email}
                   type='text'
                   name='email'
                   id='login-email'
@@ -56,7 +57,7 @@ const Login = () => {
               control={control}
               render={({ field }) => (
                 <Input
-                  label='password'
+                  label={strings.Password}
                   type='password'
                   name='password'
                   id='login-password'
@@ -68,7 +69,9 @@ const Login = () => {
             />
           </div>
           <div className='mx-auto w-7/12'>
-            <Button type='submit' text='submit' login />
+            <Button type='submit' login>
+              {strings.Login}
+            </Button>
           </div>
         </form>
       </div>

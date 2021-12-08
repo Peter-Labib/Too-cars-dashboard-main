@@ -3,6 +3,22 @@ export const langs = {
     en: 'en',
     ar: 'ar',
   },
+  From: {
+    en: 'from',
+    ar: 'من',
+  },
+  To: {
+    en: 'to',
+    ar: 'الى',
+  },
+  Submit: {
+    en: 'Submit',
+    ar: 'تأكيد',
+  },
+  Login: {
+    en: 'Login',
+    ar: 'تسجيل الدخول',
+  },
   Dashboard: {
     en: 'Dashboard',
     ar: 'لوحة التحكم',
@@ -136,7 +152,7 @@ export const langs = {
     en: 'Refferal Code Passenger',
     ar: 'كود الدعوة للركاب',
   },
-  bonus: {
+  Bonus: {
     en: 'Bonus',
     ar: 'بونص',
   },
@@ -185,12 +201,16 @@ export const langs = {
     en: 'Female',
     ar: 'أنثي',
   },
+  BankAccount: {
+    en: 'Bank Account',
+    ar: 'الحساب البنكى',
+  },
   BankName: {
     en: 'Bank Name',
     ar: 'أسم البنك',
   },
-  BankAccount: {
-    en: 'Bank Account',
+  BankAccountNumber: {
+    en: 'Account Number',
     ar: 'رقم الحساب',
   },
   // captin license
@@ -273,7 +293,7 @@ export const langs = {
   },
   UserStatus: {
     en: 'User Status',
-    ar: '',
+    ar: 'الحالة',
   },
   Rating: {
     en: 'Rating',

@@ -16,6 +16,7 @@ module.exports = {
       },
       textColor: {
         main: '#0086E1',
+        'blue--extended': '#005C9B',
         'green--extended': '#00C24E',
         'red--extended': '#FF5959',
         'purple--extended': '#6F62FF',
@@ -29,6 +30,9 @@ module.exports = {
       },
       minWidth: {
         '2xs--extended': '14rem',
+      },
+      borderColor:{
+        main: '#0086E1'
       },
       keyframes: {
         buzz: {

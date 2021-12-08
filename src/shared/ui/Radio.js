@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { strings } from '../../Localization/languages'
 
 const Radio = ({ title, value = 'false' }) => {
   const [val, setVal] = useState()
@@ -25,7 +26,7 @@ const Radio = ({ title, value = 'false' }) => {
             onChange={onChangeHandler}
             checked={val === 'false'}
           ></input>
-          <label>No</label>
+          <label>{strings.No}</label>
         </div>
         <div className='flex items-center gap-x-1'>
           <input
@@ -36,7 +37,7 @@ const Radio = ({ title, value = 'false' }) => {
             onChange={onChangeHandler}
             checked={val === 'true'}
           ></input>
-          <label name={title}>Yes</label>
+          <label name={title}>{strings.Yes}</label>
         </div>
       </div>
     </div>

@@ -1,14 +1,14 @@
 import React from 'react'
 
-const Button = ({ text, login, ...atr }) => {
+const Button = ({ login, children, ...atr }) => {
   return (
     <button
       className={`${
-        login ? 'py-2' : 'py-1'
-      } w-full text-white bg-main rounded-3xl px-6`}
+        login ? 'py-2 w-full' : 'py-1'
+      } text-white bg-main rounded-3xl px-6`}
       {...atr}
     >
-      {text}
+      {children}
     </button>
   )
 }

@@ -1,7 +1,7 @@
 import React from 'react'
 import { strings } from '../../Localization/languages'
-import CardsContainer from '../../shared/component/CardsContainer'
-import Card from '../../shared/component/Card'
+import Section from '../../shared/component/Section'
+import DetailCard from '../../shared/component/DetailCard'
 import icon from '../../assets/icon/users.svg'
 
 const OsUsersCount = ({ color, os, count }) => (
@@ -20,53 +20,66 @@ const Home = () => {
     <div className='grid grid-cols-6 gap-x-4'>
       {/* second col */}
       <div className='col-span-6 md:col-span-3 lg:col-span-2 '>
-        <CardsContainer title={strings.DriversEgypt}>
-          <Card
-            color='green--extended'
-            count='45484'
-            countsFor={strings.MobileAndAdminActive}
-          />
-          <Card
-            color='red--extended'
-            count='45484'
-            countsFor={strings.AdminInactive}
-          />
-          <Card count='45484' countsFor={strings.AdminSuspend} />
-          <Card count='45484' countsFor={strings.AdminUnderRevision} />
-          <Card count='45484' countsFor={strings.AdminWaitingApproval} />
-        </CardsContainer>
+        <Section title={strings.DriversEgypt} titleCentered>
+          <div className='grid grid-cols-2 gap-x-2 gap-y-4 pb-4 px-4'>
+            <DetailCard
+              textColor='text-green--extended'
+              count='45484'
+              countsFor={strings.MobileAndAdminActive}
+            />
+            <DetailCard
+              textColor='text-red--extended'
+              count='45484'
+              countsFor={strings.AdminInactive}
+            />
+            <DetailCard count='45484' countsFor={strings.AdminSuspend} />
+            <DetailCard count='45484' countsFor={strings.AdminUnderRevision} />
+            <DetailCard
+              count='45484'
+              countsFor={strings.AdminWaitingApproval}
+            />
+          </div>
+        </Section>
       </div>
       {/* third col */}
       <div className='col-span-6 md:col-span-3 lg:col-span-2 self-start flex flex-col gap-y-4 lg:gap-y-8 mb-4'>
-        <CardsContainer title={strings.PessengersEgypt}>
-          <Card
-            color='green--extended'
-            count='45484'
-            countsFor={strings.MobileActive}
-          />
-          <Card
-            color='purple--extended'
-            count='45484'
-            countsFor={strings.MobileInactive}
-          />
-          <Card
-            color='black--extended'
-            count='45484'
-            countsFor={strings.Suspend}
-          />
-        </CardsContainer>
-        <CardsContainer title={strings.SupervisorsTrips}>
-          <Card color='red--extended' count='45484' countsFor={strings.Busy} />
-          <Card
-            color='green--extended'
-            count='45484'
-            countsFor={strings.TodayPaidTrips}
-          />
-        </CardsContainer>
+        <Section title={strings.PessengersEgypt} titleCentered>
+          <div className='grid grid-cols-2 gap-x-2 gap-y-4  pb-4 px-4'>
+            <DetailCard
+              textColor='text-green--extended'
+              count='45484'
+              countsFor={strings.MobileActive}
+            />
+            <DetailCard
+              textColor='text-purple--extended'
+              count='45484'
+              countsFor={strings.MobileInactive}
+            />
+            <DetailCard
+              textColor='text-black--extended'
+              count='45484'
+              countsFor={strings.Suspend}
+            />
+          </div>
+        </Section>
+        <Section title={strings.SupervisorsTrips} titleCentered>
+          <div className='grid grid-cols-2 gap-x-2 gap-y-4  pb-4 px-4'>
+            <DetailCard
+              textColor='text-red--extended'
+              count='45484'
+              countsFor={strings.Busy}
+            />
+            <DetailCard
+              textColor='text-green--extended'
+              count='45484'
+              countsFor={strings.TodayPaidTrips}
+            />
+          </div>
+        </Section>
       </div>
 
       {/* all users circule */}
-      <div className='col-span-6 md:col-span-3 lg:col-span-2 mb-4 rounded-lg shadow-added px-2 md:px-4 py-6 flex flex-col gap-y-7 lg:self-start items-center overflow-hidden'>
+      <div className='col-span-6 md:col-span-3 lg:col-span-2 mb-4 shadowed-container-added p-2 flex flex-col gap-y-7 lg:self-start items-center overflow-hidden'>
         <div className='flex gap-x-2'>
           <span>
             <img src={icon} alt='users' />

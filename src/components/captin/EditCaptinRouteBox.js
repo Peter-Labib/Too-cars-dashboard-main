@@ -1,4 +1,5 @@
 import React from 'react'
+import {strings} from '../../Localization/languages' 
 import plusBlue from '../../assets/icon/plus-blue.svg'
 import closeRed from '../../assets/icon/close-red.svg'
 import plusGreen from '../../assets/icon/plus-green.svg'
@@ -13,26 +14,26 @@ const CaptinEditButton = ({title, icon}) => (
   </div>
 )
 
-const EditCaptin = () => {
+const EditCaptinRouteBox = () => {
   return (
     <div className='w-full'>
-      <p className='title-added'>Captin edit</p>
-      <div className='grid grid-cols-2 grid-rows-2 gap-4 shadow-added px-8 py-5 rounded-lg'>
+      <p className='title-added'>{strings.EditCaptin}</p>
+      <div className='grid grid-cols-2 grid-rows-2 gap-4 shadowed-container-added p-4'>
         <div className='col-span-1'>
-          <CaptinEditButton title='Add captin' icon={plusBlue} />
+          <CaptinEditButton title={strings.AddCaptin} icon={plusBlue} />
         </div>
         <div className='col-span-1'>
-          <CaptinEditButton title='Charge' icon={plusGreen} />
+          <CaptinEditButton title={strings.AddBalance} icon={plusGreen} />
         </div>
         <div className='col-span-1'>
-          <CaptinEditButton title='Deactive' icon={closeRed} />
+          <CaptinEditButton title={strings.Deactivate} icon={closeRed} />
         </div>
         <div className='col-span-1'>
-          <CaptinEditButton title='Trips' icon={location} />
+          <CaptinEditButton title={strings.Trips} icon={location} />
         </div>
       </div>
     </div>
   )
 }
 
-export default EditCaptin
+export default EditCaptinRouteBox

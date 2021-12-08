@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Route, Switch } from 'react-router-dom'
 import Sidebar from '../shared/component/Sidebar/Sidebar'
 import Header from '../shared/component/Header'
-import EditCaptinMainData from './captin/EditCaptinMainData'
+import EditCaptin from './views/EditCaptin'
 import Home from './views/Home'
 
 const AppContainer = () => {
@@ -33,7 +33,7 @@ const AppContainer = () => {
         >
           <Switch>
             <Route path='/captin'>
-              <EditCaptinMainData />
+              <EditCaptin />
             </Route>
             <Route path='/'>
               <Home />

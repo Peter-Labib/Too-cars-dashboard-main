@@ -28,10 +28,11 @@ const CaptinLicense = () => {
   return (
     <div className='w-full'>
       <p className='title-added'>{strings.CaptinLicense}</p>
-      <form onSubmit={handleSubmit(onSubmit)}>
-        <div
-          className='grid grid-cols-2 gap-x-4 rounded-lg shadow-added px-2 py-4'
-        >
+      <form
+        onSubmit={handleSubmit(onSubmit)}
+        className='shadowed-container-added p-4'
+      >
+        <div className='grid grid-cols-2 gap-x-4 '>
           <Controller
             name='drivingLicenseFront'
             control={control}
@@ -48,8 +49,17 @@ const CaptinLicense = () => {
           <ImagePicker label='choose pic' />
           <ImagePicker label='choose pic' />
           <ImagePicker label='choose pic' />
+          <ImagePicker label='choose pic' />
+          <ImagePicker label='choose pic' />
+          <ImagePicker label='choose pic' />
+          <ImagePicker label='choose pic' />
+          <ImagePicker label='choose pic' />
+          <ImagePicker label='choose pic' />
+          <ImagePicker label='choose pic' />
+          <ImagePicker label='choose pic' />
+          <ImagePicker label='choose pic' />
         </div>
-        <div>
+        <div className='mx-auto max-w-min mt-4'>
           <Button type='submit'>submit</Button>
         </div>
       </form>

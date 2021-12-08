@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import {v4 as uuidv4} from 'uuid'
 import { Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronCircleDown } from '@fortawesome/free-solid-svg-icons'
@@ -49,7 +50,7 @@ const Dropdown = ({ linkData }) => {
       >
         {children.map((child) => (
           <div
-            key={child}
+            key={uuidv4()}
             className='flex items-center px-12 py-2 hover:bg-main hover:text-white hover:shadow-inner cursor-pointer'
           >
             <div>

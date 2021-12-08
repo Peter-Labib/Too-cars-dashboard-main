@@ -75,13 +75,13 @@ const ImgPicker = React.forwardRef(({ label, name, onChange, id }, ref) => {
             leaveTo='translate-x-100'
           >
             <div
-              className={`${styles.close_scss} z-10 bg-red-600 text-white cursor-pointer pointer-events-auto w-3 h-3 transform -translate-y-1/2 -translate-x-1/2 rounded-sm absolute grid place-content-center text-xs`}
+              className={`${styles.close_scss} z-10 bg-red-600 text-white cursor-pointer pointer-events-auto w-3 h-3 transform -translate-y-1/2 -translate-x-1/2 rounded-sm absolute grid place-content-center text-xs shadow-md`}
               onClick={removeImg}
             >
               <span>x</span>
             </div>
             <div
-              className={`${styles.img_scss} w-6 h-6 overflow-hidden rounded-sm cursor-pointer pointer-events-auto`}
+              className={`${styles.img_scss} w-6 h-6 overflow-hidden rounded-sm cursor-pointer pointer-events-auto shadow-lg`}
               onClick={openLightbox}
             >
               <img src={val} alt={label} className='object-cover w-full' />
