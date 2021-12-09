@@ -184,7 +184,7 @@ const EditCaptinMainData = () => {
               control={control}
               render={({ field }) => (
                 <Dropdown
-                  error={errors.nationality?.message}
+                  error={errors.agency?.message}
                   name='agency'
                   id='edit-captin-agency'
                   label={strings.Agency}

@@ -98,7 +98,18 @@ export const langs = {
     en: 'web',
     ar: 'ويب',
   },
-
+  MobileTypes: {
+    en: 'mobile types',
+    ar: 'أنواع الهواتف',
+  },
+  NetworksTypes: {
+    en: 'networks types',
+    ar: 'أنواع الشبكات',
+  },
+  CarTypes: {
+    en: 'car types',
+    ar: 'أنواع السيارات',
+  },
   //   CaptinMainData
   CaptinProfile: {
     en: 'Captin Profile',
@@ -356,4 +367,93 @@ export const langs = {
     en: 'Production date',
     ar: 'تاريخ الصنع',
   },
+  CarImg: {
+    en: 'Car img',
+    ar: 'صورة السيارة',
+  },
+  ArabicCarNum: {
+    en: 'Arabic car number',
+    ar: 'رقم السيارة بالعربى',
+  },
+
+  // bill cycle
+  BillCycle: {
+    en: 'Bill cycle',
+    ar: 'الفترة المحاسبية',
+  },
+  PaidTrips: {
+    en: 'Paid trips',
+    ar: 'الرحلات المدفوعة',
+  },
+  OnlineHours: {
+    en: 'Online hours',
+    ar: 'عدد ساعات الاتاحة',
+  },
+  CompletedTripsRate: {
+    en: 'Completed trip rate',
+    ar: 'معدل الرحلات المكتملة',
+  },
+  CaptinRate: {
+    en: 'Captin rate',
+    ar: 'تقيم السائق',
+  },
+  PaidTripsPrice: {
+    en: 'Paid trip price',
+    ar: 'سعر الرحلات المدفوعة',
+  },
+  CaptinCommisionOfPaidTrips: {
+    en: 'Captin commission of paid trips',
+    ar: 'عمولة السائق للرحلات مدفوعة',
+  },
+  PromoCost: {
+    en: 'Promo cost',
+    ar: 'تكلفه البروموكود',
+  },
+  GuaranteePeriodsCount: {
+    en: 'Guarantee periods count',
+    ar: 'عدد فترات حد الامان',
+  },
+  AddBalanceTotal: {
+    en: 'Add balance total',
+    ar: 'اجمالي الرصيد المضاف',
+  },
+  DiscountBalanceTotal: {
+    en: 'Discount balance total',
+    ar: 'خصم الرصيد المضاف',
+  },
+  DriverBalanceBeforeBillCycleEnd: {
+    en: 'Driver balance before billCycle end',
+    ar: 'رصيد السائق قبل انتهاء الدورة',
+  },
+  AgencyCommission: {
+    en: 'Agency commission',
+    ar: 'عمولة الوكالة',
+  },
+  Amount: {
+    en: 'Amount',
+    ar: 'المبلغ',
+  },
+  Status: {
+    en: 'Status',
+    ar: 'الحالة',
+  },
+
+  //Trips control
+  TripsControl:{
+    en:'Trips control',
+    ar:'التحكم في الرحلات'
+  },
+  CaptinWaiting:{
+    en:'Captin waiting',
+    ar:'انتظار السائق'
+  },
+  ClientCancelTrip:{
+    en:'Client cancel trip',
+    ar:'الراكب ألغي الرحلة'
+  },
+  CaptinArrived:{
+    en:'Captin arrived',
+    ar:'السائق وصل'
+  },
+  
 }

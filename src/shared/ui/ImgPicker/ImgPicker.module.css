@@ -1,0 +1,55 @@
+.smallHeight {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.close_scss:hover + .img_scss {
+  -webkit-animation-name: buzz;
+          animation-name: buzz;
+  -webkit-animation-duration: 0.2s;
+          animation-duration: 0.2s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+  -webkit-transform-origin: 30% 5%;
+          transform-origin: 30% 5%;
+}
+
+@-webkit-keyframes buzz {
+  0% {
+    -webkit-transform: rotate(-1.5deg);
+            transform: rotate(-1.5deg);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  50% {
+    -webkit-transform: rotate(2deg);
+            transform: rotate(2deg);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+}
+
+@keyframes buzz {
+  0% {
+    -webkit-transform: rotate(-1.5deg);
+            transform: rotate(-1.5deg);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  50% {
+    -webkit-transform: rotate(2deg);
+            transform: rotate(2deg);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+}
+
+.leave {
+  -webkit-transition: all ease-in-out 1s;
+  transition: all ease-in-out 1s;
+}
+/*# sourceMappingURL=ImgPicker.module.css.map */

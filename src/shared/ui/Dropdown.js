@@ -16,7 +16,7 @@ const Dropdown = React.forwardRef(
 
     return (
       <div className='input-container-main-data-added'>
-        <label>{label}</label>
+        <label className='truncate'>{label}</label>
         <div className='relative h-10'>
           <select
             className='w-full outline-none'

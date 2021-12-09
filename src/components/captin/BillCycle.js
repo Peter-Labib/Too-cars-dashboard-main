@@ -1,9 +1,9 @@
 import React, { useState, Fragment } from 'react'
-import {v4 as uuidv4} from 'uuid'
+import { v4 as uuidv4 } from 'uuid'
 import { Listbox, Transition } from '@headlessui/react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons'
-import {strings} from '../../Localization/languages'
+import { strings } from '../../Localization/languages'
 import CardDetail from '../../shared/component/DetailCard'
 
 const cycles = [
@@ -26,7 +26,7 @@ const BillCycle = () => {
         <div className='relative'>
           <Listbox.Button className='bg-main text-white p-2 flex justify-between items-center rounded-t-lg w-60'>
             <span className='block truncate font-semibold text-lg'>
-              Bill Cycle
+              {strings.BillCycle}
             </span>
             <span className='flex items-center'>
               <FontAwesomeIcon icon={faChevronDown} />
@@ -88,93 +88,78 @@ const BillCycle = () => {
           </Transition>
         </div>
       </Listbox>
-        <div className='grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4 lg:gap-6 p-6 shadowed-container-added '>
-          <CardDetail
-            textColor='text-blue--extended'
-            count='1500'
-            countsFor='reject times'
-          />
-          <CardDetail
-            textColor='text-blue--extended'
-            count='1500'
-            countsFor='reject times'
-          />
-          <CardDetail
-            textColor='text-blue--extended'
-            count='1500'
-            countsFor='reject times'
-          />
-          <CardDetail
-            textColor='text-blue--extended'
-            count='1500'
-            countsFor='reject times'
-          />
-          <CardDetail
-            textColor='text-blue--extended'
-            count='1500'
-            countsFor='reject times'
-          />
-          <CardDetail
-            textColor='text-blue--extended'
-            count='1500'
-            countsFor='reject times'
-          />
-          <CardDetail
-            textColor='text-blue--extended'
-            count='1500'
-            countsFor='reject times'
-          />
-          <CardDetail
-            textColor='text-blue--extended'
-            count='1500'
-            countsFor='reject times'
-          />
-          <CardDetail
-            textColor='text-blue--extended'
-            count='1500'
-            countsFor='reject times'
-          />
-          <CardDetail
-            textColor='text-blue--extended'
-            count='1500'
-            countsFor='reject times'
-          />
-          <CardDetail
-            textColor='text-blue--extended'
-            count='1500'
-            countsFor='reject times'
-          />
-          <CardDetail
-            textColor='text-blue--extended'
-            count='1500'
-            countsFor='reject times'
-          />
-          <CardDetail
-            textColor='text-blue--extended'
-            count='1500'
-            countsFor='reject times'
-          />
-          <CardDetail
-            textColor='text-blue--extended'
-            count='1500'
-            countsFor='reject times'
-          />
-          <CardDetail
-            textColor='text-blue--extended'
-            count='1500'
-            countsFor='reject times'
-          />
-          <CardDetail
-            textColor='text-blue--extended'
-            count='1500'
-            countsFor='reject times'
-          />
-          <CardDetail
-            textColor='text-blue--extended'
-            count='1500'
-            countsFor='reject times'
-          />
-        </div>
+      <div className='grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4 lg:gap-6 p-6 shadowed-container-added '>
+        <CardDetail
+          textColor='text-blue--extended'
+          count='1500'
+          countsFor={strings.PaidTrips}
+        />
+        <CardDetail
+          textColor='text-blue--extended'
+          count='1500'
+          countsFor={strings.OnlineHours}
+        />
+        <CardDetail
+          textColor='text-blue--extended'
+          count='1500'
+          countsFor={strings.CompletedTripsRate}
+        />
+        <CardDetail
+          textColor='text-blue--extended'
+          count='1500'
+          countsFor={strings.CaptinRate}
+        />
+        <CardDetail
+          textColor='text-blue--extended'
+          count='1500'
+          countsFor={strings.PaidTripsPrice}
+        />
+        <CardDetail
+          textColor='text-blue--extended'
+          count='1500'
+          countsFor={strings.CaptinCommisionOfPaidTrips}
+        />
+        <CardDetail
+          textColor='text-blue--extended'
+          count='1500'
+          countsFor={strings.PromoCost}
+        />
+        <CardDetail
+          textColor='text-blue--extended'
+          count='1500'
+          countsFor={strings.GuaranteePeriodsCount}
+        />
+        <CardDetail
+          textColor='text-blue--extended'
+          count='1500'
+          countsFor={strings.AddBalanceTotal}
+        />
+        <CardDetail
+          textColor='text-blue--extended'
+          count='1500'
+          countsFor={strings.DiscountBalanceTotal}
+        />
+        <CardDetail
+          textColor='text-blue--extended'
+          count='1500'
+          countsFor={strings.DriverBalanceBeforeBillCycleEnd}
+        />
+        <CardDetail
+          textColor='text-blue--extended'
+          count='1500'
+          countsFor={strings.AgencyCommission}
+        />
+        <CardDetail
+          textColor='text-blue--extended'
+          count='1500'
+          countsFor={strings.Amount}
+        />
+        <CardDetail
+          textColor='text-blue--extended'
+          count='1500'
+          countsFor={strings.Status}
+        />
+      </div>
     </div>
   )
 }

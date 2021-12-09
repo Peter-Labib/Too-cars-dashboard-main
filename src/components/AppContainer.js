@@ -31,6 +31,7 @@ const AppContainer = () => {
             // openSidebar ? '  max-w-min' : 'max-w-max w-3/4'
           }`}
         >
+          <div className='max-w-screen-xl mx-auto'>
           <Switch>
             <Route path='/captin'>
               <EditCaptin />
@@ -39,6 +40,7 @@ const AppContainer = () => {
               <Home />
             </Route>
           </Switch>
+          </div>
         </div>
       </div>
     </React.Fragment>

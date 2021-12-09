@@ -20,7 +20,7 @@ const EditCaptin = () => {
             <CaptinLicense />
           </div>
         </div>
-        <div className='flex flex-col gap-y-4 lg:gap-y-6'>
+        <div className='flex flex-col gap-y-4 lg:gap-y-6 w-full lg:w-2/5'>
           <EditCaptinRouteBox />
           <CaptinStatus />
           <EditCpatinCar />
